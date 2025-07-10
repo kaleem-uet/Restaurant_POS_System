@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import TopNav from "@/components/common/TopNav";
-import BottomNav from "@/components/common/BottomNav";
-
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap", // optional: improves rendering
 });
 
 export const metadata: Metadata = {
@@ -17,16 +13,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={inter.variable}>
-        <TopNav />
-        {children}
-        <BottomNav />
-      </body>
+      <body className={inter.variable}>{children}</body>
     </html>
   );
 }

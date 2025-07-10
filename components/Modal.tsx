@@ -7,8 +7,8 @@ import Button from "./common/Button";
 import Input from "./common/Input";
 
 type Props = {
-  setIsTableModalOpen: (value: boolean) => void,
-  onSubmit?: (data: { tableNo: string, seats: string }) => void,
+  setIsTableModalOpen: (value: boolean) => void;
+  onSubmit?: (data: { tableNo: string; seats: string }) => void;
 };
 
 const Modal = ({ setIsTableModalOpen, onSubmit }: Props) => {
@@ -51,7 +51,6 @@ const Modal = ({ setIsTableModalOpen, onSubmit }: Props) => {
 
         {/* Modal Body */}
         <form onSubmit={handleSubmit} className="space-y-4 mt-10">
-         
           <Input
             label="Table Name"
             type="text"

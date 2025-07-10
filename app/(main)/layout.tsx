@@ -1,13 +1,15 @@
+import TopNav from "@/components/common/TopNav";
 import BottomNav from "@/components/common/BottomNav";
-export default function DashboardLayout({
+export default function MainLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <main>
+      <TopNav />
       {children}
       <BottomNav />
-    </div>
+    </main>
   );
 }
