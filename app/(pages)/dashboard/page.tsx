@@ -1,7 +1,9 @@
 "use client";
-import Metrics from "@/app/components/Metrics";
+import Metrics from "@/components/Metrics";
 import { ForkKnife, Tags, Soup } from "lucide-react";
 import { useState } from "react";
+import RecentOrder from "./_comp/RecentOrder";
+import Modal from "@/components/Modal";
 const buttons = [
   { label: "Add Table", icon: <ForkKnife />, action: "table" },
   { label: "Add Category", icon: <Tags />, action: "category" },
@@ -9,7 +11,7 @@ const buttons = [
 ];
 
 const tabs = ["Metrics", "Orders", "Payments"];
-export default function page() {
+export default function Page() {
   const [activeTab, setActiveTab] = useState("Metrics");
   const [isTableModalOpen, setIsTableModalOpen] = useState(false);
   const handleOpenModal = (action: string) => {
@@ -51,6 +53,20 @@ export default function page() {
         </div>
       </div>
       {activeTab === "Metrics" && <Metrics />}
+      {activeTab === "Orders" && <RecentOrder />}
+      {activeTab === "Payments" && (
+        <div className="text-white p-6 container mx-auto">
+          Payment Component Coming Soon
+        </div>
+      )}
+      {isTableModalOpen && (
+        <Modal
+          setIsTableModalOpen={setIsTableModalOpen}
+          onSubmit={(data) => {
+            console.log("Parent Received:", data);
+          }}
+        />
+      )}
     </div>
   );
 }

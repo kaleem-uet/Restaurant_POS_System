@@ -1,6 +1,6 @@
 import Image from "next/image";
-import AuthBottom from "../components/common/AuthBottom";
-import AuthTop from "../components/common/AuthTop";
+import AuthBottom from "../../components/common/AuthBottom";
+import AuthTop from "../../components/common/AuthTop";
 
 export default function AuthLayout({
   children,

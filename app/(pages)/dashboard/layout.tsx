@@ -1,4 +1,4 @@
-import BottomNav from "@/app/components/common/BottomNav";
+import BottomNav from "@/components/common/BottomNav";
 export default function DashboardLayout({
   children,
 }: {
