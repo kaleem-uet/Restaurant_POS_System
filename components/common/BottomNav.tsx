@@ -1,11 +1,16 @@
+"use client";
 import Link from "next/link";
 import { Home, List, Utensils, MoreHorizontal, ChefHat } from "lucide-react";
+import { usePathname } from "next/navigation";
 export default function BottomNav() {
+  const pathname = usePathname();
+  if (pathname.startsWith("/login") || pathname.startsWith("/register"))
+    return null;
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-zinc-900 text-white flex justify-around items-center h-16 shadow-inner border-t border-zinc-700">
       {/* Home */}
       <Link
-        href="/home"
+        href="/"
         className="flex flex-col items-center gap-1 text-sm hover:text-yellow-400"
       >
         <Home size={20} />

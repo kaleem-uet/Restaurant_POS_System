@@ -54,9 +54,11 @@ const Modal = ({ setIsTableModalOpen, onSubmit }: Props) => {
           <Input
             label="Table Name"
             type="text"
-            name="tableName"
+            name="tableNo"
             placeholder="Enter Table Name"
             required
+            value={tableData.tableNo}
+            onChange={handleInputChange}
           />
 
           <Input
@@ -65,6 +67,8 @@ const Modal = ({ setIsTableModalOpen, onSubmit }: Props) => {
             name="seats"
             placeholder="Number of Seats"
             required
+            value={tableData.seats}
+            onChange={handleInputChange}
           />
           <Button label="Add Table " type="submit" className="mt-6" />
         </form>

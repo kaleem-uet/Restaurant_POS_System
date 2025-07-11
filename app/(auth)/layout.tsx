@@ -20,8 +20,8 @@ export default function AuthLayout({
         />
         <div className="absolute inset-0 bg-gray-400/50 mix-blend-multiply z-10" />
         <blockquote className="absolute bottom-4 md:bottom-10 z-20 px-6 md:px-8 text-lg md:text-2xl italic text-white">
-          "Serve customers the best food with prompt and friendly service in a
-          welcoming atmosphere, and they’ll keep coming back."
+          &quot;Serve customers the best food with prompt and friendly service
+          in a welcoming atmosphere, and they’ll keep coming back.&quot;
           <br />
           <span className="block mt-2 md:mt-4 text-yellow-400">
             - Founder of Restro

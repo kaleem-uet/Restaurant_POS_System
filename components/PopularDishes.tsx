@@ -67,11 +67,11 @@ const PopularDishes = () => {
           </a>
         </div>
 
-        <ScrollArea className="md:h-[500px] h-full w-full">
+        <ScrollArea className="md:h-[700px] h-full w-full">
           {popularDishes.map((dish) => (
             <div
               key={dish.id}
-              className="flex items-center gap-4 bg-[#1f1f1f] rounded-[15px] px-6 py-4 mt-4 mx-6"
+              className="flex items-center gap-4 bg-[#1f1f1f] rounded-[15px] px-6 py-4 mb-4 mx-6"
             >
               <h1 className="text-[#f5f5f5] font-bold text-xl mr-4">
                 {dish.id < 10 ? `0${dish.id}` : dish.id}

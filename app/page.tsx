@@ -23,6 +23,7 @@ export default function Home() {
               footerNum={2}
             />
           </div>
+
           <RecentOrders />
         </div>
 

@@ -18,7 +18,7 @@ export default function Login() {
         placeholder="Enter employee password"
         required
       />
-      <Button label="Sign In" type="submit" />
+      <Button label="Sign In" type="submit" goTo="/" />
     </>
   );
 }

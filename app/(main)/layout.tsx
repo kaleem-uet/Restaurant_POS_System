@@ -1,5 +1,4 @@
 import TopNav from "@/components/common/TopNav";
-import BottomNav from "@/components/common/BottomNav";
 export default function MainLayout({
   children,
 }: {
@@ -9,7 +8,6 @@ export default function MainLayout({
     <main>
       <TopNav />
       {children}
-      <BottomNav />
     </main>
   );
 }

@@ -1,11 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { use } from "react";
 import clsx from "clsx";
+import { useRouter } from "next/navigation";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string;
   fullWidth?: boolean;
+  goTo?: string;
   variant?: "primary" | "secondary" | "danger";
 }
 
@@ -15,6 +17,7 @@ const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   className,
   children,
+  goTo,
   ...props
 }) => {
   const baseStyles =
@@ -25,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({
     secondary: "bg-gray-700 text-white hover:bg-gray-600 mt-3",
     danger: "bg-red-500 text-white hover:bg-red-400 mt-3 ",
   };
-
+  const router = useRouter();
   return (
     <button
       className={clsx(
@@ -35,6 +38,11 @@ const Button: React.FC<ButtonProps> = ({
         className
       )}
       {...props}
+      onClick={() => {
+        if (goTo) {
+          router.push(goTo);
+        }
+      }}
     >
       {label || children}
     </button>

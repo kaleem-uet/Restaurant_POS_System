@@ -2,6 +2,9 @@ import BackButton from "@/components/common/BackButton";
 import Image from "next/image";
 import React from "react";
 import MenuContainer from "./_menu/MenuContainer";
+import CustomerInfo from "./_menu/CustomerInfo";
+import CartInfo from "./_menu/CartInfo";
+import Bill from "./_menu/Bill";
 
 export default function page() {
   return (
@@ -37,8 +40,15 @@ export default function page() {
           </div>
           <MenuContainer />
         </div>
-        <div className="col-span-12 md:col-span-4">
-          <div className=""></div>
+        <div className="col-span-12 md:col-span-4 md:mr-2 lg:mr-2">
+          <div className="flex-[1] bg-[#1a1a1a] mt-4 mr-3 h-[780px] rounded-lg pt-2">
+            {/* Customer Info */}
+            <CustomerInfo />
+            <hr className="border-[#2a2a2a] border-t-2" />
+            <CartInfo />
+            <hr className="border-[#2a2a2a] border-t-2" /> {/* Bill */}
+            <Bill />
+          </div>
         </div>
       </div>
     </section>
